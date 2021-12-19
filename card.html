@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Opening Card</title>
+   <style>
+      body{
+         background: #eee;
+         justify-content:center;
+         align-items:center;
+         display:flex;
+         font-family:Arial, Helvetica, sans-serif;
+         min-height:90vh;
+      }
+      .card{
+         position:relative;
+         width:200px;
+         height:300px;
+         border-radius:0px 10px 10px 0px;
+         background:#f4f4f4;
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         perspective: 100em;
+         margin:25px;
+         box-shadow:30px 40px 40px rgba(0,0,0,0.2);
+      }
+      .cover{
+         position:absolute;
+         top:0px;
+         left:0px;
+         width:100%;
+         height:100%;
+         background: dodgerblue;
+         transform-style: preserve-3d;
+         transform-origin: left;
+         transition:transform 1s;
+         border-radius:0px 10px 10px 0px;
+         font-size:30px;
+         font-weight: bold;
+      }
+      .card:hover .cover{
+         transform:rotateY(-120deg);
+      }
+      .coverFront, .coverBack{
+         position:absolute;
+         width:100%;
+         height:100%;
+         justify-content: center;
+         align-items:center;
+         display: flex;
+      }
+      .coverFront{
+         background: #f4f4f4;
+         text-align: center;
+         border-radius: 0px 10px 10px 0px ;
+         color:#333;
+      }
+      .coverBack{
+         background: #ddd;
+         border-radius: 10px 0px 0px 10px;
+         transform:rotateY(180deg);
+      }
+      .sh_img{
+         width:100px;
+      }
+      .sh_btn{
+         border:0px;
+         background: dodgerblue;
+         border-radius: 5px;
+         padding:10px 20px;
+         color:#fff;
+         margin-top:10px;
+      }
+   </style>
+</head>
+<body>
+   <div class="card">
+      <div style="padding: 20px;text-align: center;font-size:12px;">
+         <h1>Apps</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue.
+         </p>
+         <button class="sh_btn">Read more</button>
+      </div>
+      <div class="cover">
+         <div class="coverFront">
+            <div>
+               <h5>Apps</h5>
+               <img src="img1.svg" alt="" class="sh_img">
+            </div>
+         </div>
+         <div class="coverBack"></div>
+      </div>
+   </div>
+
+   <div class="card">
+      <div style="padding: 20px;text-align: center;font-size:12px;">
+         <h1>Marketing</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue.
+         </p>
+         <button class="sh_btn">Read more</button>
+      </div>
+      <div class="cover">
+         <div class="coverFront">
+            <div>
+               <h5>Marketing</h5>
+               <img src="img2.svg" alt="" class="sh_img">
+            </div>
+         </div>
+         <div class="coverBack"></div>
+      </div>
+   </div>
+
+   <div class="card">
+      <div style="padding: 20px;text-align: center;font-size:12px;">
+         <h1>Security</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue.
+         </p>
+         <button class="sh_btn">Read more</button>
+      </div>
+      <div class="cover">
+         <div class="coverFront">
+            <div>
+               <h5>Security</h5>
+               <img src="img3.svg" alt="" class="sh_img">
+            </div>
+         </div>
+         <div class="coverBack"></div>
+      </div>
+   </div>
+</body>
+</html>
